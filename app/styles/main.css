@@ -49,7 +49,8 @@ body {
     margin: 0;
     padding: 0; }
     .flikr-details ul li {
-      display: inline; }
+      display: inline;
+      padding-right: 10px; }
   .flikr-details .d-inline {
     display: inline-block; }
   .flikr-details .btn-back {

@@ -1,15 +1,15 @@
 
 <h2>Flickr Public Feed</h2>
 <div id="fixed" when-scrolled="loadMore()">
-  <div class="row flickr" ng-repeat="feed in feeds">
+  <div class="flickr" ng-repeat="feed in feeds">
     <div class="col-sm-4 no-padding">
       <img ng-src="{{ feed.media.m }}" ng-click="change_page(feed)"/>
     </div>
     <div class="col-sm-8">
       <p>{{ feed.title | limitTo: 40}}</p>
-      <p class="d-inline"><a ng-href="https://www.flickr.com/people/{{feed.author_id}}">{{ feed.author | author}}</a></p>
+      <p class="d-inline"><a ng-href="https://www.flickr.com/people/{{feed.author_id}}" target="_blank">{{ feed.author | author}}</a></p>
       <p class="d-inline">Published: {{ feed.published | date : "dd MMM yyyy hh:mm" }}</p>
-      <p class="d-inline"><a ng-href="{{feed.link}}">View on Flickr</a></p>
+      <p class="d-inline"><a ng-href="{{feed.link}}" target="_blank">View on Flickr</a></p>
     </div>
   </div>
 </div>
