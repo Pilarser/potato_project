@@ -1,7 +1,6 @@
 # potato-project
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.16.0.
+This project is based on AngularJS 1.7.2 & flickr API.
 
 ## Build & development
 
