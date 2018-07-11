@@ -1,0 +1,129 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+$primary-color: #1567d9;
+$hover-color: #fb0084;
+$grey: #333;
+$white: #fff;
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  padding: 0;
+}
+
+
+
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+
+
+
+/* Custom page header */
+
+.header {
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 10px;
+
+  /* Make the masthead heading the same height as the navigation */
+  h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 40px;
+    padding-bottom: 19px;
+  }
+}
+
+#fixed {
+  border: 1px solid $grey;
+  height: 500px;
+  overflow: auto;
+  .flickr {
+    display: flex;
+    border: 1px solid $grey;
+    align-items: center;
+    .no-padding {
+      padding-left: 0px;
+      padding-right: 0;
+    }
+
+    img {
+      max-width: 240px;
+    }
+    .d-inline {
+      display: inline-block;
+    }
+  }
+}
+
+.flikr-details {
+  border: 1px solid $grey;
+  align-items: center;
+  padding: 20px;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+    }
+  }
+  .d-inline {
+    display: inline-block;
+  }
+  .btn-back {
+    color: $white;
+    background-color: $primary-color;
+    border-color: $primary-color;
+    float: right;
+    padding: 10px 40px;
+    span {
+      color: $white;
+    }
+    &:hover {
+      background-color: $hover-color;
+      border-color: $hover-color;
+      color: $white;
+    }
+  }
+}
+
+
+
+
+
+/* Responsive: Portrait tablets and up */
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 900px;
+  }
+
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 30px;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}

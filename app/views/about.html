@@ -1,0 +1,23 @@
+<div class="row flikr-details">
+  <div class="col-xs-12">
+    <p class="d-inline">{{ feed.title | limitTo: 40}}</p>
+    <a class="btn btn-back d-inline" href="#!/" role="button"> <span>Back</span> </a>
+  </div>
+  <div class="col-xs-12">
+    <p class="d-inline"><a ng-href="https://www.flickr.com/people/{{feed.author_id}}">{{ feed.author | author}}</a></p>
+    <p class="d-inline">&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; Published: {{ feed.published | date : "dd MMM yyyy hh:mm" }}</p>
+  </div>
+  <div class="col-sm-4">
+    <img ng-src="{{ feed.media.m }}" />
+  </div>
+  <div class="col-sm-8">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque molestie vestibulum diam id dapibus. Donec suscipit turpis vitae rutrum tempus. Vestibulum ut ex non quam lobortis pellentesque at non metus. Phasellus dictum nibh dictum nisl tincidunt vestibulum. Quisque in ipsum justo. Nam id augue at elit lacinia consequat. Suspendisse vel viverra nibh. Aliquam volutpat, ipsum ut iaculis fermentum, dolor est luctus massa, in convallis tortor nisl sed lacus. Vivamus maximus commodo mauris, at malesuada ante tristique ac. Mauris eu vehicula nisl, ut egestas enim. Nullam venenatis ultricies ex et luctus. Nam elit elit, interdum ut nunc eu, sollicitudin venenatis dolor. Praesent sed erat quis turpis convallis ultricies ut eu ante. Cras suscipit ipsum ut augue pellentesque vehicula. In ac tristique enim. Aenean interdum consectetur mauris, non pretium tortor tristique ac. Pellentesque commodo lectus vel felis fringilla, ut molestie leo malesuada. Fusce convallis, felis vel posuere scelerisque, lorem lacus sollicitudin nibh, id bibendum nulla nisl a urna. Sed aliquet accumsan enim ut vestibulum. Ut a tortor tempor, tincidunt tortor nec, ullamcorper leo. Nulla scelerisque, ante in elementum ullamcorper, dolor massa interdum mauris, sit amet commodo purus dolor ac tellus. Morbi vitae odio id nisi commodo suscipit id a turpis. Morbi dolor magna, tincidunt a enim consequat, facilisis egestas justo. Nam felis libero, laoreet in dui vel, faucibus gravida ipsum. Morbi dapibus tellus id fringilla sollicitudin.</p>
+    <ul>
+      <li>Tag</li>
+      <li><a ng-href="https://www.flickr.com/photos/heavenuphere/tags/{{feed.tags | tags}}">Tag 1</a></li>
+      <li><a ng-href="">Tag 2</a></li>
+      <li><a ng-href="">Tag 3</a></li>
+    </ul>
+  </div>
+</div>
+</div>
