@@ -18,40 +18,24 @@ angular.module('potatoProjectApp')
       if (arrayOfStrings.length >= 2) {
         return arrayOfStrings[1]
       } else {
-        return arrayOfStrings[0];  
+        return arrayOfStrings[0];
       }
-      
+
     };
   })
 
-  .controller('MainCtrl', ['$scope', '$location', '$window', function($scope, $location, $window) {
+  .controller('MainCtrl', ['$scope', '$location', '$window', 'flickrPhotos', function($scope, $location, $window, flickrPhotos) {
     this.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 
-
-    window.getPhotos = function(data) {
-      $scope.$apply(function() {
-        $scope.feeds = data.items;
-      });
+     
+    if ($window.sessionStorage.searchValue) {
+        place = $window.sessionStorage.searchValue;
     }
-
-    var src = "http://api.flickr.com/services/feeds/photos_public.gne?tags=" + place + "&tagmode=any&format=json&jsoncallback=getPhotos";
-    var script = document.createElement("script");
-    script.src = src;
-    document.body.appendChild(script);
-
-
-
-    $scope.feeds = [];
-
-    $scope.loadMore = function(feed) {
-      $scope.feeds.push();
-    };
-
-    $scope.loadMore();
+    $scope.feeds = flickrPhotos.load({ tags: place });
 
 
     $scope.change_page = function(data) {
@@ -59,5 +43,10 @@ angular.module('potatoProjectApp')
 
       $location.path('/about');
       console.log("data = ", data);
+    };
+
+    $scope.findValue = function(enteredValue) {
+      $scope.feeds = flickrPhotos.load({ tags: enteredValue });
+      sessionStorage.setItem('searchValue', enteredValue);
     };
   }])

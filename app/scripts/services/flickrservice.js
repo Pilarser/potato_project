@@ -11,6 +11,6 @@
 
 
 angular.module('potatoProjectApp')
-	.service('flickrPhotos', function (shareDataService) {
-    return $resource('https://api.flickr.com/services/feeds/photos_public.gne', { format: 'json', jsonpCallbackParam: 'JSON_CALLBACK' }, { 'load': { 'method': 'JSONP' } });
+	.service('flickrPhotos', function ($resource) {
+    return $resource('http://api.flickr.com/services/feeds/photos_public.gne', { format: 'json', jsoncallback: 'JSON_CALLBACK' }, { 'load': { 'method': 'JSONP' } });
 });

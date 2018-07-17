@@ -1,9 +1,21 @@
 
-<h2>Flickr Public Feed</h2>
+<div class="row">
+  <div class="col-sm-8">
+    <h2>Flickr Public Feed</h2>
+  </div>
+  <div class="col-sm-4">
+    <div class="searchform group">
+      <label for="search-box">
+        <span class="fa fa-2x fa-search" ng-click="findValue(enteredValue)"></span>
+      </label>
+      <input type="search" ng-model="enteredValue" id="search-box" placeholder="Search" autocomplete="off">
+    </div>
+  </div>
+</div>
 <div id="fixed" when-scrolled="loadMore()">
-  <div class="flickr" ng-repeat="feed in feeds">
+  <div class="flickr" ng-repeat="feed in feeds.items">
     <div class="col-sm-4 no-padding">
-      <img ng-src="{{ feed.media.m }}" ng-click="change_page(feed)"/>
+      <img ng-src="{{ feed.media.m }}" ng-click="change_page(feed)" />
     </div>
     <div class="col-sm-8">
       <p>{{ feed.title | limitTo: 40}}</p>

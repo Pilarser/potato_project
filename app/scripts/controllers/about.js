@@ -40,4 +40,6 @@ angular.module('potatoProjectApp')
     $scope.feed = JSON.parse(data);
     console.log("data = ", $scope.feed);
 
+
+
   }]);

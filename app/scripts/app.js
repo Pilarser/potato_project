@@ -10,12 +10,12 @@
  */
 angular
   .module('potatoProjectApp', [
-    'ngAnimate',
-    'ngCookies',
+    // 'ngAnimate',
+    // 'ngCookies',
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    // 'ngTouch'
   ])
   .config(function ($routeProvider, $sceDelegateProvider) {
     $sceDelegateProvider.resourceUrlWhitelist([

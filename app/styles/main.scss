@@ -17,8 +17,6 @@ body {
 
 
 
-
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
 
 .header,
@@ -26,8 +24,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-
-
 
 
 
@@ -100,6 +96,50 @@ body {
     }
   }
 }
+
+
+
+
+
+
+
+
+
+/* SEARCH BAR STYLE */
+
+.searchform {
+  display: block;
+  margin: 20px 0 30px 0;
+  overflow: hidden;
+  label {
+    vertical-align: baseline;
+    color: $primary-color;
+    margin: 0.25em 0.25em 0 0;
+    float: right;
+        cursor: pointer;
+  }
+  input {
+    vertical-align: baseline;
+    color: $primary-color;
+    &[type="search"] {
+      border: 2px solid $primary-color;
+      border-width: 0 0 3px;
+      background-color: transparent;
+      font: 22px "Open Sans", sans-serif;
+      padding: 0.125em 0.225em;
+      float: left;
+      &:focus {
+        color: $hover-color;
+        border-color: $hover-color;
+        outline: none;
+      }
+    }
+    &:-webkit-autofill {
+      background-color: $white !important;
+    }
+  }
+}
+
 
 
 
